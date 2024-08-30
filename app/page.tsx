@@ -1,12 +1,15 @@
-import { ModeToggle } from "@/components/ModeToggle";
+import FooterComponent from "@/components/FooterComponent";
+import HeroComponent from "@/components/HeroComponent";
 import NavBarComponent from "@/components/NavBarComponent";
-import Image from "next/image";
-import Link from "next/link";
+import PhotosMagicComponent from "@/components/PhotosMagicComponent";
 
 export default function Home() {
   return (
-    <main className="h-[200vh]">
+    <main className="">
       <NavBarComponent />
+      <HeroComponent />
+      <PhotosMagicComponent />
+      <FooterComponent />
     </main>
   );
 }

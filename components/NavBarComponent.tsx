@@ -22,7 +22,7 @@ const NavBarComponent = (props: Props) => {
 
   return (
     <div
-      className={`flex items-center justify-between w-full h-24 sticky bg-slate-200 dark:bg-slate-900 px-20 top-0 ${
+      className={`flex items-center justify-between w-full h-24 z-50 sticky bg-slate-200 dark:bg-slate-900 px-20 top-0 ${
         scrolled ? 'shadow-[2px_2px_2px_2px_rgba(198,198,198,0.07)]' : ''
       }`}
     >
@@ -40,10 +40,10 @@ const NavBarComponent = (props: Props) => {
             alt="Revsplash Dark Logo"
             width={40}
             height={40}
-            className="dark:flex hidden"
+            className="dark:flex hidden w-[40px] h-[40px]"
           />
         </>
-        <span className="font-bold text-[50px] font-sans">
+        <span className="font-bold text-[40px] font-sans">
           Revi<span className="text-red-300">Splash</span>
         </span>
       </Link>
