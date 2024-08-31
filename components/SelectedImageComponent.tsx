@@ -40,7 +40,7 @@ const SelectedImageComponent = (props: Props) => {
     };
 
     loadPhoto(props.selectedPhotoId);
-  }, [props, props.selectedPhotoId]);
+  }, [props.selectedPhotoId]);
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setInputValue(event.target.value);
@@ -54,13 +54,8 @@ const SelectedImageComponent = (props: Props) => {
       return;
     }
 
-    const width = element.offsetWidth;
-    const height = element.offsetHeight;
-
     html2canvas(element as HTMLElement, {
       scale: 1,
-      width: width,
-      height: height,
       useCORS: true,
     })
       .then((canvas: HTMLCanvasElement) => {
@@ -151,7 +146,7 @@ const SelectedImageComponent = (props: Props) => {
                       width={200}
                       height={200}
                       loading="lazy"
-                      className="object-cover object-center rounded-lg"
+                      className="object-contain object-center rounded-lg"
                     />
                     <div className="absolute bg-black/30 dark:bg-black/70 top-0 left-0 right-0 bottom-0 flex flex-col justify-between items-center py-5">
                       <div>
