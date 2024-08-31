@@ -32,7 +32,7 @@ const PhotoSheetComponent = (props: Props) => {
         </SheetTrigger>
       </div>
       {openSheet && (
-        <SheetContent className="pt-14 pb-8">
+        <SheetContent className="pt-8 md:pt-5 lg:pt-14 pb-8">
           {prevSelected && (
             <SelectCardComponent
               setPrevSelected={setPrevSelected}

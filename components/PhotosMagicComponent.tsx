@@ -30,8 +30,8 @@ const PhotosMagicComponent = (props: Props) => {
   }, []);
 
   return (
-    <div className="px-20">
-      <div className="relative flex h-[400px] w-full items-center justify-center overflow-hidden border border-slate-200 dark:border-slate-900 rounded-lg bg-background md:shadow-xl ">
+    <div className="px-5 md:px-10 lg:px-20">
+      <div className="relative flex h-[300px] md:h-[400px] w-full items-center justify-center overflow-hidden border border-slate-200 dark:border-slate-900 rounded-lg bg-background md:shadow-xl ">
         <Marquee pauseOnHover className="[--duration:20s]">
           {photos.map(photo => (
             <div key={photo.id} className="w-fit">
@@ -47,9 +47,20 @@ const PhotosMagicComponent = (props: Props) => {
           ))}
         </Marquee>
       </div>
-      <div className="py-10 font-extrabold leading-[70px] flex flex-col items-center justify-center" id='choose'>
+      <div className="py-10 font-extrabold hidden xl:flex leading-[70px] flex-col items-center justify-center" id='choose'>
         <LetterPullup words="Choose and customize your cards with" />
         <LetterPullup words="beautiful images in four simple steps" />
+      </div>
+      <div className="py-10 font-extrabold hidden lg:flex xl:hidden leading-[70px] flex-col items-center justify-center" id='choose'>
+        <LetterPullup words="Choose and customize your" />
+        <LetterPullup words="cards with beautiful images" />
+        <LetterPullup words="in four simple steps" />
+      </div>
+      <div className="py-10 font-extrabold flex lg:hidden flex-col items-center justify-center" id='choose'>
+        <LetterPullup words="Choose and customize" />
+        <LetterPullup words=" your cards with" />
+        <LetterPullup words="beautiful images in" />
+        <LetterPullup words="four simple steps" />
       </div>
       <PhotoSheetComponent />
       <div className='flex items-center justify-center'>

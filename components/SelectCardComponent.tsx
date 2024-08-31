@@ -47,14 +47,15 @@ const SelectCardComponent = (props: Props) => {
 
   return (
     <>
-      <h2 className="text-xl font-semibold">Please Select An Image</h2>
-      <p className="pb-7">Select from these random photos</p>
+      <h2 className="text-lg md:text-xl font-semibold">Please Select An Image</h2>
+      <p className="pb-7 text-sm md:text-base">Select from these random photos</p>
       {loading ? (
         <div className="h-[50vh] flex items-center justify-center text-2xl font-semibold text-red-500">
           <h1>Loading...</h1>
         </div>
       ) : (
-        <div className="flex flex-wrap gap-5">
+        <>
+        <div className="hidden md:flex flex-wrap gap-5">
           {photos.map(photo => (
             <div
               key={photo.id}
@@ -76,6 +77,29 @@ const SelectCardComponent = (props: Props) => {
             </div>
           ))}
         </div>
+        <div className="flex md:hidden flex-wrap gap-5">
+          {photos.map(photo => (
+            <div
+              key={photo.id}
+              className={`w-fit cursor-pointer border-2 rounded-lg ${
+                props.selectedPhotoId === photo.id
+                  ? 'border-red-500'
+                  : 'border-transparent'
+              } transition-all duration-300 cursor-pointer`}
+              onClick={() => handlePhotoClick(photo.id)}
+            >
+              <Image
+                src={photo.urls.small}
+                alt={photo.alt_description}
+                width={80}
+                height={80}
+                loading="lazy"
+                className="object-cover object-center rounded-lg"
+              />
+            </div>
+          ))}
+        </div>
+        </>
       )}
       <div className="pt-4 flex items-center justify-center gap-3">
         {props.page >= 2 && <Button onClick={() => props.setPage(1)}>Refresh</Button>}

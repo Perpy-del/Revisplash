@@ -40,7 +40,7 @@ const SelectedImageComponent = (props: Props) => {
     };
 
     loadPhoto(props.selectedPhotoId);
-  }, [props.selectedPhotoId]);
+  }, [props, props.selectedPhotoId]);
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setInputValue(event.target.value);
@@ -66,8 +66,8 @@ const SelectedImageComponent = (props: Props) => {
 
   return (
     <>
-      <h2 className="text-xl font-semibold">Please Tell Us Your Name</h2>
-      <p className="pb-7">Personalize your card with your name</p>
+      <h2 className="text-lg md:text-xl font-semibold">Please Tell Us Your Name</h2>
+      <p className="pb-7 text-sm md:text-base">Personalize your card with your name</p>
       <div className="mb-5">
         <Input
           type="text"
