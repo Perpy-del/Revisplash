@@ -1,36 +1,61 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+![ReviSplash](./public/revsplash_logo.svg)
+# RevSplash
+Creating Memories...
 
-## Getting Started
+### Introduction
 
-First, run the development server:
+A simple application to help users generate and design a personalized “thank you” card using images.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+### Requirements
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- **ImageSelection:** Use the Unsplash API to fetch four random images for the user to choose from.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Personalization:** Once an image is selected, overlay it with the user’s name at the bottom and the text “Thank You” at the top.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- **DownloadableImage:** The final personalized image should be downloadable by the user.
 
-## Learn More
+- **Dimensions:** The generated image should have a 4:5 aspect ratio and should occupy at least 20% of the screen.
 
-To learn more about Next.js, take a look at the following resources:
+### User Interface
+-   Design a clean and intuitive user interface.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+-   Use modern styling.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+-   Ensure it is full responsive
 
-## Deploy on Vercel
+-   Ensure ease of use and navigation.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Responsive Design:
+-   Make the application responsive to different screen sizes and devices.
+-   Ensure that the user interface adapts smoothly to mobile, tablet, and desktop environments.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+### Interactivity:
+-   Add interactive elements to enhance user experience, such as buttons, forms, and feedback messages.
+-   Implement smooth transitions and animations to make the application more engaging.
+
+### Version Control and Documentation:
+-   Use Git for version control and maintain a well-structured repository.
+-   Include clear and concise documentation explaining how to set up and run the application locally.
+-   Document any design decisions or trade-offs made during development.
+
+### Technologies Used:
+-   [NextJS with Typescript](https://nextjs.org/) - Next.js is a React framework for building full-stack web applications. You use React Components to build user interfaces, and Next.js for additional features and optimizations.
+-   [TailwindCSS](https://tailwindcss.com/) - A utility-first CSS framework packed with classes like that can be composed to build any design, directly in your markup.
+-   [ShadCN](https://ui.shadcn.com/) - Already beautifully designed components that you can copy and paste into your apps that are customizable.
+-   [MagicUI](https://magicui.design/) - free and open-source animated components built with React, Typescript, Tailwind CSS, and Framer Motion. Perfect companion for shadcn/ui.
+-   [Vercel](https://vercel.com/) - For Deployment. Vercel's Frontend Cloud provides the developer experience and infrastructure to build, scale, and secure a faster, more personalized web.
+
+### Challenges Faced
+- Faced a little challenge using the Magic UI CSS animated components but I have been meaning to use some animated framework's components. I love challenges and I set out to use MagicUI as opposed to ShadCN that I wasused to since I have never used it before and would love the experience. It was an amazing experience overall.
+
+### Demo:
+
+Deployed using Vercel:
+[ReviSplash App](https://revisplash.vercel.app/)
+
+#### Screenshot of the app:
+
+![ReviSplash](./public/revisplash_ss.png)
+
+
+### *Thank you for reading*
