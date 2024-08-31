@@ -125,11 +125,11 @@ const SelectedImageComponent = (props: Props) => {
               <h2 className="text-xl font-semibold">All Set!!</h2>
               <p className="pb-7">Here is your personalized Thank You Card.</p>
               <div
-                id="content-to-download"
                 className="w-full flex items-center justify-center pb-5"
               >
                 {props.selectedPhoto && (
                   <div
+                  id="content-to-download"
                     className={`w-fit cursor-pointer border-2 rounded-lg relative`}
                   >
                     <Image
