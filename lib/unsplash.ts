@@ -24,7 +24,6 @@ export async function fetchPhotos(page: number = 1, perPage: number = 12) {
   );
 
   const responseText = await response.text();
-  console.log(responseText)
 
   if (!response.ok) {
     throw new Error(`API request failed with status ${response.status}`);
@@ -41,7 +40,6 @@ export async function fetchAPhoto(id: string | null) {
   );
 
   const responseText = await response.text();
-  console.log(responseText);
 
   if (!response.ok) {
     throw new Error(`API request failed with status ${response.status}`);

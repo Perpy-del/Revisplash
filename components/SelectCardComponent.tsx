@@ -25,7 +25,6 @@ const SelectCardComponent = (props: Props) => {
         await new Promise(resolve => setTimeout(resolve, delay));
 
         const response = await fetchPhotos(p, 4);
-        console.log(response);
         setPhotos(response);
       } catch (error) {
         console.error('Error fetching photos:', error);

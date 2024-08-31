@@ -1,12 +1,6 @@
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
-import { fetchAPhoto, fetchPhotos } from '@/lib/unsplash';
-import { ChevronLeft, ChevronRight, Download } from 'lucide-react';
-import { useEffect, useState } from 'react';
-import Image from 'next/image';
-import { Button } from './ui/button';
-import { Input } from '@/components/ui/input';
-import { Dialog, DialogContent, DialogTrigger } from '@/components/ui/dialog';
-import { BorderBeam } from '@/components/magicui/border-beam';
+import { ChevronRight } from 'lucide-react';
+import { useState } from 'react';
 import SelectCardComponent from './SelectCardComponent';
 import SelectedImageComponent from './SelectedImageComponent';
 
