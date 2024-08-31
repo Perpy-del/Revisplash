@@ -6,7 +6,7 @@ type Props = {};
 
 const FooterComponent = (props: Props) => {
   return (
-    <div className="mt-40 bg-slate-900 dark:bg-slate-900 p-20 text-white flex justify-between items-center">
+    <div className="mt-20 md:mt-40 bg-slate-900 dark:bg-slate-900 px-5 py-10 md:p-10 lg:p-20 text-white flex flex-col md:flex-row justify-between items-center md:gap-20 lg:gap-0">
       <div>
         <Link href={'/'} className="flex items-center gap-5 pb-5">
           <>
@@ -45,7 +45,7 @@ const FooterComponent = (props: Props) => {
             GitHub
           </Link>
         </p>
-        <p>&copy; Copyright 2024</p>
+        <p className='pb-7 md:pb-0'>&copy; Copyright 2024</p>
       </div>
       <div className="flex items-center justify-center gap-5">
         <Link href={'https://github.com/Perpy-del'} target="_blank">

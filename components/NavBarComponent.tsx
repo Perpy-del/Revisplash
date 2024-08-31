@@ -11,7 +11,7 @@ type Props = {};
 
 const NavBarComponent = (props: Props) => {
   const router = useRouter();
-  
+
   const [scrolled, setScrolled] = useState<boolean>(false);
 
   useEffect(() => {
@@ -25,11 +25,11 @@ const NavBarComponent = (props: Props) => {
 
   return (
     <div
-      className={`flex items-center justify-between w-full h-24 z-50 sticky bg-slate-200 dark:bg-slate-900 px-20 top-0 ${
+      className={`flex items-center justify-between w-full h-24 z-[100] md:z-50 sticky bg-slate-200 dark:bg-slate-900 px-5 md:px-10 lg:px-20 top-0 ${
         scrolled ? 'shadow-[2px_2px_2px_2px_rgba(198,198,198,0.07)]' : ''
       }`}
     >
-      <Link href={'/'} className="flex items-center gap-5">
+      <Link href={'/'} className="md:flex items-center gap-2 md:gap-5 hidden">
         <>
           <Image
             src={'/revsplash_logo.svg'}
@@ -46,7 +46,28 @@ const NavBarComponent = (props: Props) => {
             className="dark:flex hidden w-[40px] h-[40px]"
           />
         </>
-        <span className="font-bold text-[40px] font-sans">
+        <span className="font-bold text-[20px] md:text-[40px] font-sans">
+          Revi<span className="text-red-300">Splash</span>
+        </span>
+      </Link>
+      <Link href={'/'} className="md:hidden items-center gap-5 flex">
+        <>
+          <Image
+            src={'/revsplash_logo.svg'}
+            alt="Revsplash Logo"
+            width={20}
+            height={20}
+            className="dark:hidden flex"
+          />
+          <Image
+            src={'/revsplash_logo_dark.svg'}
+            alt="Revsplash Dark Logo"
+            width={20}
+            height={20}
+            className="dark:flex hidden w-[40px] h-[40px]"
+          />
+        </>
+        <span className="font-bold text-[20px] md:text-[40px] font-sans hidden md:flex">
           Revi<span className="text-red-300">Splash</span>
         </span>
       </Link>
