@@ -5,9 +5,8 @@ import Image from 'next/image';
 import React, { useEffect, useState } from 'react';
 import Marquee from '@/components/magicui/marquee';
 import LetterPullup from '@/components/magicui/letter-pullup';
-import { Button } from './ui/button';
-import { ChevronRight } from 'lucide-react';
 import { BorderBeam } from "@/components/magicui/border-beam";
+import PhotoSheetComponent from './PhotoSheetComponent';
 
 type Props = {};
 
@@ -48,18 +47,11 @@ const PhotosMagicComponent = (props: Props) => {
           ))}
         </Marquee>
       </div>
-      <div className="py-10 font-extrabold leading-[70px] flex flex-col items-center justify-center">
+      <div className="py-10 font-extrabold leading-[70px] flex flex-col items-center justify-center" id='choose'>
         <LetterPullup words="Choose and customize your cards with" />
         <LetterPullup words="beautiful images in four simple steps" />
       </div>
-      <div className="flex items-center justify-center pb-10">
-        <Button className="bg-red-400 w-60 h-12 hover:bg-red-500 hover:scale-105 text-white font-semibold text-xl">
-          Choose Now{' '}
-          <span>
-            <ChevronRight />
-          </span>
-        </Button>
-      </div>
+      <PhotoSheetComponent />
       <div className='flex items-center justify-center'>
       <div className='relative h-fit w-fit overflow-hidden rounded-lg border bg-background md:shadow-xl"'>
         <Image

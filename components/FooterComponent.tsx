@@ -49,16 +49,16 @@ const FooterComponent = (props: Props) => {
       </div>
       <div className="flex items-center justify-center gap-5">
         <Link href={'https://github.com/Perpy-del'} target="_blank">
-          <Github className='hover:text-red-500 hover:dark:text-slate-900 hover:scale-110 transition-transform ease-in-out duration-300' />
+          <Github className='hover:text-red-500 hover:scale-110 transition-transform ease-in-out duration-300' />
         </Link>
         <Link href={'https://www.linkedin.com/in/perpydev/'} target="_blank">
-          <Linkedin className='hover:text-red-500 hover:dark:text-slate-900 hover:scale-110 transition-transform ease-in-out duration-300' />
+          <Linkedin className='hover:text-red-500 hover:scale-110 transition-transform ease-in-out duration-300' />
         </Link>
         <Link href={'https://x.com/pominpirational'} target="_blank">
-          <Twitter className='hover:text-red-500 hover:dark:text-slate-900 hover:scale-110 transition-transform ease-in-out duration-300' />
+          <Twitter className='hover:text-red-500 hover:scale-110 transition-transform ease-in-out duration-300' />
         </Link>
         <Link href={'mailto:perpetualmeninwa@gmail.com'} target="_blank">
-          <MailOpen className='hover:text-red-500 hover:dark:text-slate-900 hover:scale-110 transition-transform ease-in-out duration-300' />
+          <MailOpen className='hover:text-red-500 hover:scale-110 transition-transform ease-in-out duration-300' />
         </Link>
       </div>
     </div>

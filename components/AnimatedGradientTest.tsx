@@ -7,12 +7,12 @@ import AnimatedGradientText from '@/components/magicui/animated-gradient-text';
 import { useRouter } from 'next/navigation';
 
 export async function AnimatedGradientTextComponent() {
-//   const router = useRouter();
+  const router = useRouter();
 
   return (
     <div
       className="cursor-pointer flex items-center justify-center"
-    //   onClick={() => router.push('/open')}
+      onClick={() => router.push('#choose')}
     >
       <AnimatedGradientText className="h-14 cursor-pointer">
         <span

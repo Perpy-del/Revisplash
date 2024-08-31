@@ -5,10 +5,13 @@ import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 import { ModeToggle } from './ModeToggle';
 import { Button } from './ui/button';
+import { useRouter } from 'next/navigation';
 
 type Props = {};
 
 const NavBarComponent = (props: Props) => {
+  const router = useRouter();
+  
   const [scrolled, setScrolled] = useState<boolean>(false);
 
   useEffect(() => {
@@ -48,7 +51,7 @@ const NavBarComponent = (props: Props) => {
         </span>
       </Link>
       <div className="flex items-center gap-5">
-        <Button className="text-lg font-medium">Select Image</Button>
+        <Button className="text-lg font-medium" onClick={() => router.push('#choose')}>Select Image</Button>
         <ModeToggle />
       </div>
     </div>
