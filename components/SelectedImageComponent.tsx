@@ -49,10 +49,21 @@ const SelectedImageComponent = (props: Props) => {
   const downloadDivAsPNG = () => {
     const element = document.getElementById('content-to-download');
 
+    if (!element) {
+      console.error('Element not found');
+      return;
+    }
+
+    const width = element.offsetWidth;
+    const height = element.offsetHeight;
+
     html2canvas(element as HTMLElement, {
-      scale: 9,
+      scale: 1,
+      width: width,
+      height: height,
+      useCORS: true,
     })
-      .then((canvas: any) => {
+      .then((canvas: HTMLCanvasElement) => {
         const dataURL = canvas.toDataURL('image/png');
         const link = document.createElement('a');
         link.href = dataURL;
@@ -66,8 +77,12 @@ const SelectedImageComponent = (props: Props) => {
 
   return (
     <>
-      <h2 className="text-lg md:text-xl font-semibold">Please Tell Us Your Name</h2>
-      <p className="pb-7 text-sm md:text-base">Personalize your card with your name</p>
+      <h2 className="text-lg md:text-xl font-semibold">
+        Please Tell Us Your Name
+      </h2>
+      <p className="pb-7 text-sm md:text-base">
+        Personalize your card with your name
+      </p>
       <div className="mb-5">
         <Input
           type="text"
@@ -124,12 +139,10 @@ const SelectedImageComponent = (props: Props) => {
             <div>
               <h2 className="text-xl font-semibold">All Set!!</h2>
               <p className="pb-7">Here is your personalized Thank You Card.</p>
-              <div
-                className="w-full flex items-center justify-center pb-5"
-              >
+              <div className="w-full flex items-center justify-center pb-5">
                 {props.selectedPhoto && (
                   <div
-                  id="content-to-download"
+                    id="content-to-download"
                     className={`w-fit cursor-pointer border-2 rounded-lg relative`}
                   >
                     <Image
