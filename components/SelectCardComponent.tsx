@@ -100,7 +100,7 @@ const SelectCardComponent = (props: Props) => {
         </div>
         </>
       )}
-      <div className="pt-4 flex items-center justify-center gap-3">
+      <div className="pt-4 flex flex-wrap items-center justify-center gap-3">
         {props.page >= 2 && <Button onClick={() => props.setPage(1)}>Refresh</Button>}
         <Button onClick={handleNextPhotos}>Next</Button>
         <Button
